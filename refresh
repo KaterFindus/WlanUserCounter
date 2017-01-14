@@ -1,0 +1,19 @@
+#!/bin/bash
+# Recommend syntax for setting an infinite while loop
+VAL=-1
+while :
+do
+#       echo "Do something; hit [CTRL+C] to stop!"
+        number=$(./printdevices)
+##      echo $number
+#       echo $number
+#       python2.7 usercount.py $number
+        if [ $VAL != $number ]
+	then
+                /home/bananapi/wlanusercount/a.out $number
+		VAL=$number
+        fi
+sleep 1
+done
+#python2.7 usercount 0
+
